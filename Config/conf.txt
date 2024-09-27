@@ -1,0 +1,102 @@
+#  ----------------------------------------------------------------------------------------
+#			INCLUDE/EXCLUDE-FEATURES
+#  ----------------------------------------------------------------------------------------
+#  This part of config file is used for including/excluding features from GM.
+#
+#  Syntax:
+#	INCEXCFTR ([UniqueID]) ([ApplicationName]) [FeatureName] INCLUDE
+#  or
+#	INCEXCFTR ([UniqueID]) ([ApplicationName]) [FeatureName] EXCLUDE
+#
+#  INCLUDE (or anything other except EXCLUDE) after feature name - feature is included
+#  EXCLUDE after feature name - feature is excluded
+#
+#  If feature is excluded files will be on GM 
+#  but end-user will not be able to see or select excluded features
+#
+#  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+#  !!!!!!!Please don't change anything except INCLUDE/EXCLUDE flags bellow
+#  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+#
+#  ----------------------------------------------------------------------------------------
+INCEXCFTR (2FF8B816) (Actions) NeroHome INCLUDE
+INCEXCFTR (3652819D) () NeroVisionAPI INCLUDE
+INCEXCFTR (B035464E) (NeroStartSmart) NeroStartSmart INCLUDE
+INCEXCFTR (BCAFF604) (Features) NeroBurningRom INCLUDE
+INCEXCFTR (CB9D5429) (Features) NeroBackItUp INCLUDE
+INCEXCFTR (7CE8D626) (Actions) NeroCoverDesigner INCLUDE
+INCEXCFTR (72CC518F) (Features) NeroBurnRights INCLUDE
+INCEXCFTR (82602EE0) (Features) NeroCDDVDSpeed INCLUDE
+INCEXCFTR (7DFFCC12) (Features) NeroDriveSpeed INCLUDE
+INCEXCFTR (E72D824A) (Features) NeroInfoTool INCLUDE
+INCEXCFTR (461CA46A) (Features) DMAManager INCLUDE
+INCEXCFTR (5AD292D8) (Features) NeroBurn INCLUDE
+#
+#
+#  ----------------------------------------------------------------------------------------
+#			INCLUDE/EXCLUDE-LANGUAGES
+#  ----------------------------------------------------------------------------------------
+#  This part of config file is used for including/excluding language supports from GM.
+#
+#  Syntax:
+#	INCEXCLNG [LanguageShortName] USER_LANG
+#  or
+#	INCEXCLNG [LanguageShortName] ALWAYS
+#
+#  USER_LANG (or anything other except ALWAYS) after language short name - language is "selected by default" only if it is end-user language
+#  ALWAYS after language short name - language is "selected by default" always independent from end-user default language
+#
+#  If language is included all languages dependent files will be "selected by default" in installer
+#  All language files will be always on GM.
+#  English is always included.
+#
+#  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+#  !!!!!!!Please don't change anything except USER_LANG/ALWAYS flags
+#  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+#
+#  ----------------------------------------------------------------------------------------
+INCEXCLNG CHS USER_LANG
+INCEXCLNG CHT USER_LANG
+INCEXCLNG DEU USER_LANG
+INCEXCLNG ESP USER_LANG
+INCEXCLNG FRA USER_LANG
+INCEXCLNG ITA USER_LANG
+INCEXCLNG JPN USER_LANG
+INCEXCLNG KOR USER_LANG
+INCEXCLNG NLD USER_LANG
+INCEXCLNG PLK USER_LANG
+INCEXCLNG PTG USER_LANG
+INCEXCLNG SVE USER_LANG
+#
+#
+#  ----------------------------------------------------------------------------------------
+#			SET MSI PROPERTY
+#  ----------------------------------------------------------------------------------------
+#  This part of config file is used for changing MSI properties.
+#
+#  Syntax:
+#	MSIPROPERTY [Property Name] DEFAULT_VAL
+#  or
+#	MSIPROPERTY [Property Name] "Your value"
+#
+#  DEFAULT_VAL after property name - Property will be set with default value
+#  "Your value" after property name - Property will be set with your value
+#
+#  Property explanation:
+#  SERIALNUM - Serial Number for whole software registration ("1111-2222-3333-4444-5555-6666")
+#  TARGETDIR - Specifies the root destination directory for the installation
+#  ARPHELPLINK - Internet address, or URL, for technical support
+#  ARPHELPTELEPHONE - Technical support phone numbers
+#
+#  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+#  !!!!!!!Please use Quotation to bound your property value!!!!!!!
+#  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+#
+#  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+#  !!!!!!!Please don't change anything except DEFAULT_VAL/"Your value" flags
+#  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+#
+#  ----------------------------------------------------------------------------------------
+#
+MSIPROPERTY MIN_DIRECTX_VER 9
+MSIPROPERTY ROOTDIR "[ProgramFilesFolder]Nero\Nero 7"
